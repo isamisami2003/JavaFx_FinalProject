@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="894.0" style="-fx-background-color: #eee;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EditAppointmentdoctorController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="585.0" prefWidth="215.0" style="-fx-background-color: linear-gradient(#294D61 , #0F969C );">
+         <children>
+            <FontAwesomeIconView fill="#6da5c0" glyphName="USER_MD" layoutX="68.0" layoutY="136.0" size="8em" text="" wrappingWidth="29.600000000000023" />
+            <Button fx:id="DashBoardbutton" layoutY="203.0" mnemonicParsing="false" onAction="#DashBoardbuttonhandler" prefHeight="44.0" prefWidth="214.0" style="-fx-background-color: transparent; -fx-font-weight: bold;" text="   DashBoard" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="FreeAppointmentsbutton" alignment="CENTER" graphicTextGap="5.0" layoutY="246.0" mnemonicParsing="false" onAction="#FreeAppointmentsbuttonhandler" prefHeight="44.0" prefWidth="214.0" style="-fx-background-color: transparent; -fx-font-weight: bold;" text="    Free Appointments" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="2em" wrappingWidth="15.550012588500977" />
+               </graphic>
+            </Button>
+            <Button fx:id="BookedAppointmentsbutton" layoutY="292.0" mnemonicParsing="false" onAction="#BookedAppointmentsbuttonhandler" prefHeight="44.0" prefWidth="214.0" style="-fx-background-color: transparent; -fx-font-weight: bold;" text="Booked Appointments" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHECK" size="2em" text="" />
+               </graphic>
+            </Button>
+            <Button fx:id="logoutButton" layoutX="68.0" layoutY="515.0" mnemonicParsing="false" onAction="#logoutButtonhandler" prefHeight="44.0" prefWidth="63.0" style="-fx-background-color: #0C7075; -fx-border-color: #0C7075; -fx-border-radius: 8px;" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+               </graphic>
+            </Button>
+            <Label alignment="CENTER" layoutY="151.0" prefHeight="38.0" prefWidth="214.0" style="-fx-background-color: #0C7075;" text="Clinic Managment" textFill="WHITE">
+               <font>
+                  <Font name="AGA Arabesque" size="14.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" layoutX="35.0" layoutY="235.0" size="2em" text="" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="215.0" prefHeight="60.0" prefWidth="681.0" style="-fx-background-color: #18959E;">
+         <children>
+            <Label layoutX="34.0" layoutY="11.0" style="-fx-font-weight: bold; -fx-font-size: 30px;" text="Edit Appointment" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="234.0" layoutY="153.0" prefHeight="377.0" prefWidth="642.0" style="-fx-border-radius: 2em; -fx-background-color: #0C7075;">
+         <children>
+            <Label layoutX="322.0" layoutY="75.0" text="Appointment Day : " textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="140.0" text="Appointment Time : " textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="330.0" layoutY="137.0" text="Status :" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="saveButton" layoutX="265.0" layoutY="230.0" mnemonicParsing="false" onAction="#saveButtonHandler" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: #6DA5C0;" text="Save" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS_CIRCLE" size="2em" />
+               </graphic></Button>
+            <Label layoutX="8.0" layoutY="75.0" text="Appointment Date : " textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <RadioButton layoutX="386.0" layoutY="135.0" mnemonicParsing="false" selected="true" text="Booked" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="statusGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="502.0" layoutY="135.0" mnemonicParsing="false" text="Free" textFill="WHITE" toggleGroup="$statusGroup" />
+            <TextField fx:id="AppointmentDateTxt" layoutX="143.0" layoutY="63.0" />
+            <TextField fx:id="AppointmentTimeTxt" layoutX="143.0" layoutY="124.0" />
+            <TextField fx:id="AppointmentDayTxt" layoutX="457.0" layoutY="62.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="332.0" layoutY="75.0" text="Appointment Day : " textFill="#eeeeee">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="340.0" layoutY="127.0" text="Status :" textFill="#eeeeee">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="243.0" layoutY="85.0" mnemonicParsing="false" onAction="#backButtonhandler" prefHeight="44.0" prefWidth="56.0" style="-fx-background-color: #18959E; -fx-border-color: #18959E; -fx-border-radius: 15px;" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" layoutX="261.0" layoutY="115.0" size="2em" />
+   </children>
+</AnchorPane>

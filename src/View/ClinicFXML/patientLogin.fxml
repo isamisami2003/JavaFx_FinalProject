@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="427.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PatientLoginController">
+   <children>
+      <AnchorPane prefHeight="427.0" prefWidth="590.0" style="-fx-background-color: linear-gradient(#294D61 , #6DA5C0 , #0F969C );">
+         <children>
+            <TextField fx:id="patientUserTxt" layoutX="164.0" layoutY="196.0" prefHeight="34.0" prefWidth="239.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: white;" />
+            <Button fx:id="loginbutton" layoutX="236.0" layoutY="297.0" mnemonicParsing="false" onAction="#loginbuttonhandler" prefHeight="40.0" prefWidth="96.0" style="-fx-background-color: #072E33 , #0C7075; -fx-border-color: transparent;" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="patientPasswordTxt" layoutX="164.0" layoutY="250.0" prefHeight="34.0" prefWidth="239.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: white;" />
+            <Label layoutX="236.0" layoutY="132.0" prefHeight="40.0" prefWidth="96.0" text="Sign In" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="#6da5c0" glyphName="USER" layoutX="245.0" layoutY="129.0" size="9em" />
+            <Hyperlink fx:id="RegisterLink" layoutX="128.0" layoutY="360.0" onAction="#RegisterLinkHandler" style="-fx-font-weight: bold;" text="Create New Account" textFill="#eeeeee" />
+            <Hyperlink fx:id="AdminLogin" layoutX="344.0" layoutY="360.0" onAction="#AdminLoginHandler" prefHeight="24.0" prefWidth="96.0" style="-fx-font-weight: bold;" text="Admin Login" textFill="#eeeeee" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
